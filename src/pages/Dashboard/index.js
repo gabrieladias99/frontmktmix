@@ -3,7 +3,7 @@ import api from '../../services/api';
 import {FaRegComment} from 'react-icons/fa'
 import {BiLike} from 'react-icons/bi'
 
-import { Container, UserContainer, DataContainer, BestPostsContainer} from './styles';
+import { Container, UserContainer, DataContainer, BestPostsContainer, HashTags} from './styles';
 
 function Dashboard(props){
   const user= props.location.state.user;
@@ -47,6 +47,7 @@ function Dashboard(props){
                 </div>
               </DataContainer>
             }
+            
             <BestPostsContainer>
             { data && data.threeBestPosts.map((post)=>{
               return(
@@ -68,6 +69,14 @@ function Dashboard(props){
               )
             })}
             </BestPostsContainer>
+            <HashTags>
+              {data && data.hashtags.map((hashtag)=>{
+                return(
+                  <p>{hashtag}</p>
+                )
+              })}
+            </HashTags>
+            
       </Container>
   )
 }

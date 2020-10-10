@@ -1,9 +1,23 @@
 import styled from 'styled-components';
 
+export const HashTags = styled.div`
+  width: 1200px;
+  background-color: #f9f9f9;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  p{
+    margin-left: 10px;
+  }
+`;
+
 export const BestPostsContainer = styled.div`
   width: 1200px;
-  margin-top:20px;
-  margin-bottom: 50px;
+  margin:20px 0;
   background-color: #f9f9f9;
   display:flex;
   padding: 20px;
